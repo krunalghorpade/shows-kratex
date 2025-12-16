@@ -49,7 +49,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(15px);
 
-    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 700px;
     position: relative;
@@ -85,7 +85,7 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    border-color: #000;
+    border-color: rgba(0, 0, 0, 0.3);
     border-style: solid;
     z-index: 3;
 }
@@ -249,7 +249,7 @@ h1 {
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 0.5px solid #000;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 #countdown-block strong {
@@ -267,7 +267,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 3fr 1.5fr;
     align-items: center;
-    border-bottom: 0.5px solid #000;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
     padding: 15px 0;
     transition: all 0.2s ease-in-out;
 }
@@ -287,7 +287,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     width: 80px;
-    border: 2px solid #000;
+    border: 2px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -310,8 +310,8 @@ h1 {
     font-weight: 900;
     line-height: 1.2;
     padding: 3px 0;
-    border-bottom: 2px solid #000;
-    border-top: 2px solid #000;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .event-row .day-of-week {
@@ -375,7 +375,7 @@ h1 {
     gap: 10px;
     margin-top: 30px;
     padding-top: 30px;
-    border-top: 0.5px solid #000;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 .follow-btn,
@@ -395,7 +395,7 @@ h1 {
 /* Bandsintown Follow Button */
 .follow-btn {
     background: #000;
-    border: 2px solid #000;
+    border: 2px solid #333;
     color: #fff;
 }
 
@@ -407,7 +407,7 @@ h1 {
 /* Request Show Button */
 .request-btn {
     background: transparent;
-    border: 2px solid #000;
+    border: 2px solid #333;
     color: #000;
 }
 
@@ -439,7 +439,7 @@ h1 {
     font-size: 0.8rem;
     padding: 12px 15px;
     background: #000;
-    border: 2px solid #000;
+    border: 2px solid #333;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
@@ -457,7 +457,7 @@ h1 {
     text-align: center;
     margin-top: 30px;
     padding-top: 30px;
-    border-top: 0.5px solid #000;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.2);
 }
 
 .exclusive-content-box {
@@ -523,7 +523,7 @@ h1 {
 .section-subtitle {
     text-transform: uppercase;
     font-size: 0.8rem;
-    border-bottom: 0.5px solid #000;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 5px;
     margin-bottom: 20px;
     display: flex;
@@ -540,7 +540,7 @@ h1 {
 .video-item {
     flex: 0 0 40%;
     margin-right: 20px;
-    border: 1px solid #000;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     background: #fff;
     scroll-snap-align: start;
     position: relative;
@@ -675,7 +675,7 @@ h1 {
     width: 35px;
     height: 35px;
     margin: 0 4px;
-    border: 2px solid #000;
+    border: 2px solid #333;
     border-radius: 0;
     color: #fff;
     background: #000;
@@ -749,7 +749,7 @@ h1 {
         text-align: left;
         /* Left align text */
         padding: 15px 10px;
-        border: 1px solid black;
+        border: 1px solid rgba(0, 0, 0, 0.2);
         margin-bottom: 0.6rem;
         align-items: center;
     }
@@ -1081,6 +1081,245 @@ body[data-theme="ios"] .event-row .month-year {
     font-size: 0.65rem;
     font-weight: 600;
     padding: 0;
+}
+
+/* --- MATERIAL UI 3 THEME --- */
+body[data-theme="material3"] {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #1d1b20;
+    /* M3 On Surface */
+    background: #fdfcff;
+    /* M3 Surface */
+}
+
+/* Background video hidden in M3? Or kept? Let's keep it but put a solid backing on the card */
+
+body[data-theme="material3"] .tour-block {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 28px;
+    /* M3 Corner Radius */
+    border: none;
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.3);
+    /* Elevation 3 */
+    max-width: 700px;
+    padding: 24px;
+    color: #1d1b20;
+}
+
+body[data-theme="material3"] .tour-block::before {
+    display: none;
+    /* No grain */
+}
+
+body[data-theme="material3"] .corner-tl,
+body[data-theme="material3"] .corner-br {
+    display: none;
+}
+
+body[data-theme="material3"] h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    /* Display Large equivalent */
+    line-height: 1.1;
+    letter-spacing: -0.25px;
+    margin-bottom: 24px;
+    color: #1d1b20;
+    text-transform: none;
+    /* M3 uses sentence case usually, but we can keep title case */
+}
+
+/* Subtitle / Verification */
+body[data-theme="material3"] .verified-icon {
+    color: #6750a4;
+    /* M3 Primary */
+}
+
+/* Countdown Block */
+body[data-theme="material3"] #countdown-block {
+    background: #f3edf7;
+    /* Surface Container Secondary */
+    border-radius: 16px;
+    border: none;
+    padding: 16px;
+    color: #1d1b20;
+}
+
+/* Event Rows - Card Style List */
+body[data-theme="material3"] .event-row {
+    background: #fffbfe;
+    border: 1px solid #79747e;
+    /* Outline variant */
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 16px;
+    grid-template-columns: auto 1fr auto;
+    /* Desktop default */
+    align-items: center;
+    box-shadow: none;
+    gap: 16px;
+}
+
+body[data-theme="material3"] .event-row:hover {
+    background: #f3edf7;
+    /* Hover state */
+    padding: 16px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body[data-theme="material3"] .event-row .date {
+    border: none;
+    background: #eaddff;
+    /* Primary Container */
+    color: #21005d;
+    /* On Primary Container */
+    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+}
+
+body[data-theme="material3"] .event-row .month-year {
+    background: transparent;
+    color: #21005d;
+    font-weight: 500;
+}
+
+body[data-theme="material3"] .event-row .day-of-month {
+    border: none;
+    color: #21005d;
+}
+
+body[data-theme="material3"] .event-row .day-of-week {
+    display: none;
+}
+
+/* Buttons - M3 Filled and Tonal */
+body[data-theme="material3"] .rsvp-btn {
+    background: #6750a4;
+    /* Primary */
+    color: #fff;
+    /* On Primary */
+    border-radius: 20px;
+    /* Full pill */
+    padding: 10px 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border: none;
+    font-size: 0.875rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="material3"] .rsvp-btn:hover {
+    background: #6750a4;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="material3"] .follow-btn {
+    background: #e8def8;
+    /* Secondary Container */
+    color: #1d192b;
+    /* On Secondary Container */
+    border: none;
+    border-radius: 20px;
+}
+
+body[data-theme="material3"] .request-btn {
+    border: 1px solid #79747e;
+    /* Outline */
+    border-radius: 20px;
+    color: #6750a4;
+}
+
+/* Section Subtitles */
+body[data-theme="material3"] .section-subtitle {
+    font-size: 1.2rem;
+    border-bottom: none;
+    color: #1d1b20;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+/* Cards (Video/Merch) */
+body[data-theme="material3"] .video-item {
+    border: none;
+    border-radius: 16px;
+    background: #f3edf7;
+    overflow: hidden;
+}
+
+body[data-theme="material3"] .video-placeholder {
+    border-top: none;
+}
+
+/* Material UI 3 - Old Newspaper Look for Social Proof */
+body[data-theme="material3"] .social-proof {
+    background-color: #f4e4bc;
+    /* Old paper color */
+    color: #2c241b;
+    /* Dark brown text for contrast */
+    border: 1px solid #d3c4a4;
+    border-radius: 4px;
+    /* Slight rounding but keeping paper feel */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="material3"] .social-proof .quote {
+    color: #2c241b;
+}
+
+/* Theme Switcher */
+body[data-theme="material3"] .theme-select-container {
+    border-top: 1px solid #cac4d0;
+}
+
+body[data-theme="material3"] .theme-dropdown {
+    background: #f3edf7;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    color: #1d1b20;
+}
+
+/* Mobile Adjustments for M3 */
+@media (max-width: 600px) {
+    body[data-theme="material3"] .container {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    body[data-theme="material3"] .tour-block {
+        border-radius: 0 0 28px 28px;
+        /* Top flat, bottom rounded */
+        min-height: 100vh;
+        margin-bottom: 0;
+        padding: 16px;
+        background: #f3edf7;
+        /* Updated background for mobile */
+    }
+
+    body[data-theme="material3"] h1 {
+        font-size: 2.5rem;
+    }
+
+    body[data-theme="material3"] .event-row {
+        grid-template-columns: auto 1fr;
+        /* Compact grid */
+        gap: 12px;
+        padding: 12px;
+        background: #fff;
+        /* Keep cards white for contrast against #f3edf7 */
+        border: 1px solid rgba(121, 116, 126, 0.2);
+        /* Very light outline */
+    }
+
+    body[data-theme="material3"] .rsvp-btn {
+        margin-top: 10px;
+        grid-column: 1 / -1;
+        width: 100%;
+    }
 }
 
 body[data-theme="ios"] .event-row .day-of-month {

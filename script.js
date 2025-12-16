@@ -22,6 +22,17 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('pageData is not defined. Make sure data.js is loaded.');
     }
 
+    // Hide Loading Screen
+    window.onload = function () {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+            }, 500);
+        }
+    };
+
     function initLinks(links) {
         if (followBtn) followBtn.href = links.follow;
         if (requestBtn) requestBtn.href = links.requestShow;

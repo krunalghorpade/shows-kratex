@@ -74,6 +74,15 @@
 
 <body>
 
+    <!-- Loading Screen -->
+    <div id="loading-screen"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; color: #fff; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.5s ease-out;">
+        <i class="fas fa-spinner fa-spin" style="font-size: 3rem; margin-bottom: 20px;"></i>
+        <p
+            style="font-family: 'Helvetica Neue', sans-serif; letter-spacing: 2px; text-transform: uppercase; font-size: 0.8rem;">
+            Loading Kratex Experience...</p>
+    </div>
+
     <video autoplay muted loop playsinline id="bg-video">
         <source src="https://kratex.in/assets/images/video.mp4" type="video/mp4">
     </video>
@@ -177,6 +186,7 @@
                 <select id="theme-selector" class="theme-dropdown">
                     <option value="default">Default (Kratex)</option>
                     <option value="ios">iOS Style</option>
+                    <option value="material3">Material UI 3</option>
                 </select>
             </div>
         </div>
