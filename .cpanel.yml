@@ -4,3 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/username/public_html/
     - /bin/cp * $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
+
