@@ -247,4 +247,30 @@ document.addEventListener('DOMContentLoaded', () => {
             countdownTimerEl.innerHTML = getStatus();
         }, 1000 * 60 * 5);
     }
+
+    // --- THEME SWITCHER LOGIC ---
+    const themeSelector = document.getElementById('theme-selector');
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('siteTheme');
+    if (savedTheme) {
+        document.body.setAttribute('data-theme', savedTheme);
+        if (themeSelector) {
+            themeSelector.value = savedTheme;
+        }
+    }
+
+    if (themeSelector) {
+        themeSelector.addEventListener('change', function () {
+            const selectedTheme = this.value;
+            if (selectedTheme === 'default') {
+                document.body.removeAttribute('data-theme');
+                localStorage.removeItem('siteTheme');
+            } else {
+                document.body.setAttribute('data-theme', selectedTheme);
+                localStorage.setItem('siteTheme', selectedTheme);
+            }
+        });
+    }
+
 });

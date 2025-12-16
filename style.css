@@ -858,3 +858,310 @@ h1 {
 .contact-info-block i {
     margin-right: 5px;
 }
+
+/* --- THEME SWITCHER --- */
+.theme-select-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 0.5px solid #000;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.theme-dropdown {
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    border: 1px solid #000;
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('fonts/SF-Pro.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- iOS THEME OVERRIDES --- */
+body[data-theme="ios"] {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+body[data-theme="ios"] .tour-block {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* iOS Mobile Edge-to-Edge adjustments */
+@media (max-width: 600px) {
+    body[data-theme="ios"] .container {
+        padding: 0;
+        min-height: 100vh;
+        justify-content: flex-start;
+        /* Align top */
+    }
+
+    body[data-theme="ios"] .tour-block {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        /* Full straight edges */
+        min-height: 100vh;
+        margin-bottom: 0;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.92);
+        /* Slightly more opaque for app feel */
+    }
+
+    /* Force row layout for mobile iOS theme */
+    /* Force row layout for mobile iOS theme */
+    body[data-theme="ios"] .event-row {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        text-align: left !important;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    body[data-theme="ios"] .rsvp-btn {
+        margin-top: 0 !important;
+        width: auto !important;
+        min-width: fit-content;
+        padding: 8px 14px;
+        font-size: 0.7rem;
+        flex-shrink: 0;
+    }
+
+    /* Reduce font size for venue info on mobile iOS */
+    body[data-theme="ios"] .venue-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        /* Force left alignment of children */
+        text-align: left !important;
+        /* Force left text alignment */
+        flex-grow: 1;
+        /* Take up remaining space */
+    }
+
+    body[data-theme="ios"] .venue-city {
+        font-size: 1rem !important;
+        text-align: left !important;
+    }
+
+    body[data-theme="ios"] .venue-name-small {
+        font-size: 0.7rem !important;
+        text-align: left !important;
+    }
+
+    body[data-theme="ios"] h1 {
+        background-image: url('https://cdn.stayhappening.com/events7/banners/314bb0a0-7831-11f0-acb9-0b35d7ae141f-rimg-w1200-h675-dc481404-gmir.webp?v=1755081312');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 20px;
+        border-radius: 16px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* Align bottom */
+        align-items: flex-start;
+        /* Align left */
+        min-height: 250px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        /* Establish stacking context */
+    }
+
+    /* Grainy Gradient Overlay */
+    body[data-theme="ios"] h1::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Behind text */
+
+        /* Gradient + Noise via SVG data URI */
+        background:
+            linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%),
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+    }
+
+    body[data-theme="ios"] h1 text {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Subtitle */
+    body[data-theme="ios"] h1::after {
+        content: "Marathi Vaajlach Pahije";
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-top: 5px;
+        opacity: 0.9;
+        text-transform: none;
+        letter-spacing: 0.5px;
+    }
+
+    /* Hide verified icon in title card as it might clash */
+    body[data-theme="ios"] h1 .verified-icon {
+        display: none;
+    }
+}
+
+body[data-theme="ios"] .tour-block::before {
+    opacity: 0;
+}
+
+body[data-theme="ios"] .corner-tl,
+body[data-theme="ios"] .corner-br {
+    display: none;
+}
+
+body[data-theme="ios"] h1 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-transform: none;
+    font-size: 2.5rem;
+}
+
+body[data-theme="ios"] #countdown-block {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+body[data-theme="ios"] .event-row {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    padding: 15px 5px;
+}
+
+body[data-theme="ios"] .event-row:hover {
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 15px 5px;
+}
+
+body[data-theme="ios"] .event-row .date {
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+}
+
+body[data-theme="ios"] .event-row .month-year {
+    background: transparent;
+    color: #ff3b30;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+body[data-theme="ios"] .event-row .day-of-month {
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0;
+}
+
+body[data-theme="ios"] .event-row .day-of-week {
+    display: none;
+}
+
+body[data-theme="ios"] .rsvp-btn {
+    background: #007aff;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    padding: 8px 16px;
+    text-transform: none;
+    font-weight: 600;
+    border: none;
+}
+
+body[data-theme="ios"] .rsvp-btn:hover {
+    background: #0056b3;
+}
+
+body[data-theme="ios"] .follow-btn,
+body[data-theme="ios"] .request-btn {
+    border-radius: 20px;
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    color: #007aff;
+    font-weight: 600;
+    text-transform: none;
+}
+
+body[data-theme="ios"] .request-btn {
+    background: transparent;
+}
+
+body[data-theme="ios"] .section-subtitle {
+    border-bottom: none;
+    color: #8e8e93;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0;
+}
+
+body[data-theme="ios"] .video-item {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body[data-theme="ios"] .video-placeholder {
+    border-top: none !important;
+}
+
+body[data-theme="ios"] .exclusive-content-box {
+    background: #1c1c1e;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme="ios"] .exclusive-btn {
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+body[data-theme="ios"] .theme-select-container {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="ios"] .theme-dropdown {
+    border: none;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    padding: 8px 12px;
+}
