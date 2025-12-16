@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const yearStr = dateObj.toLocaleDateString('en-US', { year: '2-digit' });
                     const monthYearStr = `${monthStr} ${yearStr}`;
                     const dayOfMonthStr = dateObj.toLocaleDateString('en-US', { day: 'numeric' }).padStart(2, '0');
-                    const dayOfWeekStr = dateObj.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
+                    const dayOfWeekStr = dateObj.toLocaleDateString('en-US', { weekday: 'short' }).toUpperCase();
 
                     let ticketUrl = event.url;
                     if (event.offers && event.offers.length > 0) {

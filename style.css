@@ -107,7 +107,8 @@ h1 {
     text-transform: uppercase;
     font-size: 3rem;
     line-height: 0.9;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     letter-spacing: -1px;
 }
 
@@ -264,7 +265,7 @@ h1 {
 
 .event-row {
     display: grid;
-    grid-template-columns: 2fr 3fr 1.5fr;
+    grid-template-columns: 1fr 3fr 1.5fr;
     align-items: center;
     border-bottom: 0.5px solid #000;
     padding: 15px 0;
@@ -332,13 +333,14 @@ h1 {
 }
 
 .venue-city {
-    font-style: italic;
+    font-style: bold;
     font-weight: 700;
+    font-size: 1.5rem;
     order: 1;
 }
 
 .venue-name-small {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 400;
     margin-top: 2px;
     text-transform: uppercase;
@@ -720,6 +722,10 @@ h1 {
 @media (max-width: 600px) {
     h1 {
         font-size: 3rem;
+        margin-top: 30px;
+        /* Added spacing above */
+        margin-bottom: 30px;
+        /* Added spacing below */
     }
 
     /* Hide video and use image on mobile */
@@ -737,24 +743,32 @@ h1 {
     }
 
     .event-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto 1fr;
+        /* Date and Venue in one row */
         gap: 10px;
-        text-align: center;
+        text-align: left;
+        /* Left align text */
         padding: 15px 10px;
         border: 1px solid black;
         margin-bottom: 0.6rem;
+        align-items: center;
     }
 
     .event-row .date {
-        width: 100px;
-        margin: 0 auto;
+        width: 70px;
+        /* Reduced width for mobile */
+        margin: 0;
+        /* Remove auto centering */
     }
 
     .event-row .venue-info {
         padding-right: 0;
+        text-align: left;
     }
 
     .rsvp-btn {
+        grid-column: 1 / -1;
+        /* Button spans full width below */
         margin-top: 10px;
     }
 
