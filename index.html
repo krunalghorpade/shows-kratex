@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRATEX Tour Dates & Videos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="https://kratex.in/assets/images/video.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <div class="tour-block">
+            <div class="corner-tl"></div>
+            <div class="corner-br"></div>
+
+            <h1 id="artist-title">
+                KRATEX TOUR DATES
+                <span class="verified-icon" title="Official Artist Page">
+                    <i class="fas fa-check-circle blue-tick"></i>
+                </span>
+            </h1>
+
+            <div id="dynamic-social-proof" class="social-proof">
+                <!-- Populated by JS -->
+            </div>
+            <div id="countdown-block">
+                <span>NEXT SHOW STATUS:</span>
+                <strong id="countdown-timer">FETCHING DATE...</strong>
+            </div>
+
+            <div id="tour-dates">
+                <div class="loading">Initializing data stream...</div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#" target="_blank" class="follow-btn" title="Get a notification when Kratex plays near you.">
+                    <i class="fas fa-bell"></i> FOLLOW Kratex
+                </a>
+
+                <a href="#" target="_blank" class="request-btn" id="request-show-link">
+                    REQUEST SHOW IN YOUR CITY
+                </a>
+            </div>
+
+            <div id="email-signup-cta">
+                <div class="exclusive-content-box">
+                    <p>ACCESS EXCLUSIVE EDITS & BEHIND THE SCENES</p>
+                    <strong>JOIN THE MAILING LIST & GET A FREE UNRELEASED TRACK</strong>
+                    <a href="#" target="_blank" class="exclusive-btn">
+                        GET INSTANT ACCESS
+                    </a>
+                </div>
+            </div>
+
+            <div class="video-section">
+                <div class="section-subtitle">Watch Kratex Live Sets</div>
+                <div class="video-carousel">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div class="video-section merch-section" id="merch">
+                <div class="section-subtitle">Official KRATEX Merchandise</div>
+                <div class="video-carousel merch-carousel">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <div class="social-bar">
+            <!-- Populated by JS -->
+        </div>
+
+    </div>
+
+    <div id="sticky-cta-footer">
+        <a href="#" id="sticky-cta-link" target="_blank" class="rsvp-btn"></a>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
