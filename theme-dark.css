@@ -1,0 +1,748 @@
+/* --- DARK MODES --- */
+
+
+/* 1. DEFAULT DARK */
+body[data-theme="default-dark"] {
+    background: #111 !important;
+    color: #fff !important;
+}
+
+body[data-theme="default-dark"] .tour-block {
+    background: rgba(0, 0, 0, 0.7);
+    border-color: #444;
+}
+
+/* Ensure ALL text elements in Default Dark are white */
+body[data-theme="default-dark"] h1,
+body[data-theme="default-dark"] h2,
+body[data-theme="default-dark"] strong,
+body[data-theme="default-dark"] p,
+body[data-theme="default-dark"] label,
+body[data-theme="default-dark"] span:not(.month-year):not(.day-of-month):not(.day-of-week),
+body[data-theme="default-dark"] .venue-city,
+body[data-theme="default-dark"] .venue-name-small,
+body[data-theme="default-dark"] .section-subtitle,
+body[data-theme="default-dark"] .social-proof,
+body[data-theme="default-dark"] .social-proof .quote,
+body[data-theme="default-dark"] #countdown-block,
+body[data-theme="default-dark"] #countdown-block strong,
+body[data-theme="default-dark"] .contact-info-block,
+body[data-theme="default-dark"] .contact-info-block p,
+body[data-theme="default-dark"] .contact-info-block strong,
+body[data-theme="default-dark"] #instagram-cta p {
+    color: #fff !important;
+}
+
+body[data-theme="default-dark"] .event-row {
+    border-bottom: 0.5px solid #444;
+}
+
+body[data-theme="default-dark"] .event-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="default-dark"] .event-row .month-year {
+    background-color: #bb2d3b;
+    /* Brighter red for dark mode */
+}
+
+body[data-theme="default-dark"] .event-row .day-of-month,
+body[data-theme="default-dark"] .event-row .day-of-week {
+    background: #000;
+    color: #fff;
+    border-color: #444;
+}
+
+body[data-theme="default-dark"] .event-row .date {
+    border-color: #444;
+}
+
+/* BUTTONS: White Background, Black Text */
+body[data-theme="default-dark"] .rsvp-btn {
+    border: 1px solid #fff;
+    background: #fff !important;
+    color: #000 !important;
+}
+
+body[data-theme="default-dark"] .rsvp-btn:hover {
+    background: #ccc !important;
+    color: #000 !important;
+}
+
+body[data-theme="default-dark"] .request-btn {
+    border: 1px solid #fff;
+    background: #fff !important;
+    color: #000 !important;
+}
+
+body[data-theme="default-dark"] .request-btn:hover {
+    background: #ccc !important;
+    color: #000 !important;
+}
+
+body[data-theme="default-dark"] .follow-btn {
+    background: #fff !important;
+    border: 1px solid #fff;
+    color: #000 !important;
+}
+
+body[data-theme="default-dark"] .follow-btn:hover {
+    background: #ccc !important;
+    color: #000 !important;
+}
+
+
+/* Fix Video/Merch Cards in Default Dark */
+body[data-theme="default-dark"] .video-item {
+    background: #222;
+    border: 1px solid #444;
+    color: #fff;
+}
+
+body[data-theme="default-dark"] .video-placeholder span,
+body[data-theme="default-dark"] .video-placeholder strong,
+body[data-theme="default-dark"] .video-placeholder p {
+    color: #fff !important;
+}
+
+body[data-theme="default-dark"] .video-placeholder i {
+    color: #fff !important;
+}
+
+body[data-theme="default-dark"] .social-proof {
+    background: #222;
+    color: #fff;
+    --mask: none;
+    -webkit-mask: none;
+    mask: none;
+    border: 1px solid #444;
+}
+
+body[data-theme="default-dark"] .theme-select-container {
+    border-top: 1px solid #444;
+}
+
+body[data-theme="default-dark"] label {
+    color: #fff;
+}
+
+body[data-theme="default-dark"] .theme-dropdown {
+    background: #000;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body[data-theme="default-dark"] option {
+    background: #000;
+    color: #fff;
+}
+
+/* Fix CTA buttons */
+body[data-theme="default-dark"] .insta-btn,
+body[data-theme="default-dark"] .exclusive-btn {
+    border-color: #fff;
+}
+
+body[data-theme="default-dark"] .cta-buttons,
+body[data-theme="default-dark"] #instagram-cta,
+body[data-theme="default-dark"] #email-signup-cta {
+    border-color: #444;
+}
+
+body[data-theme="default-dark"] #instagram-cta p {
+    color: #ccc;
+}
+
+body[data-theme="default-dark"] .exclusive-content-box {
+    border-color: #444;
+    background: #1a1a1a;
+}
+
+body[data-theme="default-dark"] .exclusive-content-box strong {
+    color: #fff;
+}
+
+
+/* 2. iOS DARK */
+body[data-theme="ios-dark"] {
+    font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #fff !important;
+    background: #000;
+}
+
+body[data-theme="ios-dark"] .tour-block {
+    background: rgba(28, 28, 30, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+body[data-theme="ios-dark"] .tour-block::before {
+    opacity: 0;
+}
+
+body[data-theme="ios-dark"] .corner-tl,
+body[data-theme="ios-dark"] .corner-br {
+    display: none;
+}
+
+body[data-theme="ios-dark"] h1 {
+    background-image: url('https://cdn.stayhappening.com/events7/banners/314bb0a0-7831-11f0-acb9-0b35d7ae141f-rimg-w1200-h675-dc481404-gmir.webp?v=1755081312');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-transform: none;
+    text-align: left;
+    margin-top: 10px;
+}
+
+body[data-theme="ios-dark"] h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%), url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+body[data-theme="ios-dark"] h1::after {
+    content: "Marathi Vaajlach Pahije";
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: 5px;
+    opacity: 0.9;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    color: #fff;
+}
+
+body[data-theme="ios-dark"] h1 text {
+    position: relative;
+    z-index: 2;
+}
+
+body[data-theme="ios-dark"] h1 .verified-icon {
+    display: none;
+}
+
+body[data-theme="ios-dark"] #countdown-block {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+}
+
+body[data-theme="ios-dark"] #countdown-block strong {
+    color: #fff;
+}
+
+body[data-theme="ios-dark"] .event-row {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    padding: 15px 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+body[data-theme="ios-dark"] .event-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+}
+
+body[data-theme="ios-dark"] .event-row .date {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+}
+
+body[data-theme="ios-dark"] .event-row .month-year {
+    background: transparent;
+    color: #ff453a;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+body[data-theme="ios-dark"] .event-row .day-of-month {
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0;
+}
+
+body[data-theme="ios-dark"] .event-row .day-of-week {
+    display: none;
+}
+
+body[data-theme="ios-dark"] .venue-city,
+body[data-theme="ios-dark"] .venue-name-small {
+    color: #fff;
+}
+
+body[data-theme="ios-dark"] .venue-info {
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+body[data-theme="ios-dark"] .rsvp-btn {
+    background: #0a84ff;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.75rem;
+    padding: 8px 16px;
+    font-weight: 600;
+    text-transform: none;
+    width: auto;
+    flex-shrink: 0;
+}
+
+body[data-theme="ios-dark"] .section-subtitle {
+    color: #8e8e93;
+    border-bottom: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0;
+}
+
+body[data-theme="ios-dark"] .video-item {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1c1c1e;
+}
+
+body[data-theme="ios-dark"] .video-placeholder {
+    border-top: none;
+}
+
+body[data-theme="ios-dark"] .video-placeholder span,
+body[data-theme="ios-dark"] .video-placeholder strong,
+body[data-theme="ios-dark"] .video-placeholder p {
+    color: #fff !important;
+}
+
+body[data-theme="ios-dark"] .video-placeholder i {
+    color: #fff !important;
+}
+
+body[data-theme="ios-dark"] .exclusive-content-box {
+    background: #1c1c1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    border-radius: 20px;
+}
+
+body[data-theme="ios-dark"] .exclusive-btn {
+    background: #fff;
+    color: #000;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+body[data-theme="ios-dark"] .theme-select-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="ios-dark"] label {
+    color: #8e8e93;
+}
+
+body[data-theme="ios-dark"] .theme-dropdown {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+body[data-theme="ios-dark"] .social-proof {
+    background: #1c1c1e;
+    color: #fff;
+    border: none;
+    mask: none;
+    -webkit-mask: none;
+    border-radius: 12px;
+}
+
+body[data-theme="ios-dark"] .social-proof .quote {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    body[data-theme="ios-dark"] .container {
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    body[data-theme="ios-dark"] .tour-block {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        min-height: 100vh;
+        background: #000;
+        margin-bottom: 0;
+        box-shadow: none;
+    }
+
+    body[data-theme="ios-dark"] .event-row {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex-wrap: nowrap !important;
+        text-align: left !important;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    body[data-theme="ios-dark"] .venue-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+        text-align: left !important;
+        flex-grow: 1;
+    }
+
+    body[data-theme="ios-dark"] .rsvp-btn {
+        margin-top: 0 !important;
+        width: auto !important;
+        min-width: fit-content;
+        padding: 8px 14px;
+        font-size: 0.7rem;
+        flex-shrink: 0;
+    }
+
+    body[data-theme="ios-dark"] .venue-city {
+        font-size: 1rem !important;
+        text-align: left !important;
+        color: #fff;
+    }
+
+    body[data-theme="ios-dark"] .venue-name-small {
+        font-size: 0.7rem !important;
+        text-align: left !important;
+        color: #98989d;
+    }
+}
+
+
+/* 3. MATERIAL UI DARK */
+body[data-theme="material3-dark"] {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #e6e1e5;
+    background: #141218;
+}
+
+body[data-theme="material3-dark"] .tour-block {
+    background: #141218;
+    border-radius: 28px;
+    border: 1px solid #49454f;
+    box-shadow: none;
+    max-width: 700px;
+    padding: 24px;
+    color: #e6e1e5;
+}
+
+body[data-theme="material3-dark"] .tour-block::before {
+    display: none;
+}
+
+body[data-theme="material3-dark"] .corner-tl,
+body[data-theme="material3-dark"] .corner-br {
+    display: none;
+}
+
+body[data-theme="material3-dark"] h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    color: #e6e1e5;
+    text-transform: none;
+    margin-bottom: 24px;
+}
+
+body[data-theme="material3-dark"] .verified-icon {
+    color: #d0bcff;
+}
+
+body[data-theme="material3-dark"] #countdown-block {
+    background: #2b2930;
+    color: #e6e1e5;
+    border-radius: 16px;
+    border: none;
+    padding: 16px;
+}
+
+body[data-theme="material3-dark"] #countdown-block strong {
+    color: #e6e1e5;
+}
+
+body[data-theme="material3-dark"] .event-row {
+    background: #1d1b20;
+    border: 1px solid #49454f;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 16px;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+}
+
+body[data-theme="material3-dark"] .event-row:hover {
+    background: #2b2930;
+}
+
+body[data-theme="material3-dark"] .event-row .date {
+    border: none;
+    background: #4f378b;
+    color: #eaddff;
+    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+}
+
+body[data-theme="material3-dark"] .event-row .month-year {
+    background: transparent;
+    color: #eaddff;
+    font-weight: 500;
+}
+
+body[data-theme="material3-dark"] .event-row .day-of-month {
+    border: none;
+    color: #eaddff;
+}
+
+body[data-theme="material3-dark"] .event-row .day-of-week {
+    display: none;
+}
+
+body[data-theme="material3-dark"] .venue-city,
+body[data-theme="material3-dark"] .venue-name-small {
+    color: #e6e1e5;
+}
+
+body[data-theme="material3-dark"] .rsvp-btn {
+    background: #d0bcff;
+    color: #381e72;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    font-size: 0.875rem;
+}
+
+body[data-theme="material3-dark"] .rsvp-btn:hover {
+    background: #e8def8;
+}
+
+body[data-theme="material3-dark"] .follow-btn {
+    background: #4a4458;
+    color: #e8def8;
+    border: none;
+    border-radius: 20px;
+}
+
+body[data-theme="material3-dark"] .request-btn {
+    border: 1px solid #938f99;
+    border-radius: 20px;
+    color: #d0bcff;
+}
+
+body[data-theme="material3-dark"] .section-subtitle {
+    color: #cac4d0;
+    border-bottom: none;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+body[data-theme="material3-dark"] .social-proof {
+    background: #3e2723;
+    color: #ffccbc;
+    border: 1px solid #5d4037;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+body[data-theme="material3-dark"] .social-proof .quote {
+    color: #ffccbc;
+}
+
+body[data-theme="material3-dark"] .video-item {
+    border-radius: 16px;
+    border: none;
+    background: #2b2930;
+}
+
+body[data-theme="material3-dark"] .video-placeholder {
+    border: none;
+}
+
+body[data-theme="material3-dark"] .video-placeholder span,
+body[data-theme="material3-dark"] .video-placeholder strong,
+body[data-theme="material3-dark"] .video-placeholder p {
+    color: #e6e1e5 !important;
+}
+
+body[data-theme="material3-dark"] .video-placeholder i {
+    color: #e6e1e5 !important;
+}
+
+body[data-theme="material3-dark"] .theme-select-container {
+    border-top: 1px solid #49454f;
+}
+
+body[data-theme="material3-dark"] label {
+    color: #cac4d0;
+}
+
+body[data-theme="material3-dark"] .theme-dropdown {
+    background: #2b2930;
+    color: #e6e1e5;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    body[data-theme="material3-dark"] .container {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    body[data-theme="material3-dark"] .tour-block {
+        border-radius: 0 0 28px 28px;
+        min-height: 100vh;
+        background: #141218;
+        padding: 16px;
+    }
+
+    body[data-theme="material3-dark"] .event-row {
+        grid-template-columns: auto 1fr;
+        gap: 12px;
+        padding: 12px;
+        background: #1d1b20;
+        border: 1px solid #49454f;
+    }
+
+    body[data-theme="material3-dark"] .rsvp-btn {
+        margin-top: 10px;
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
+
+/* --- GLOBAL DARK MODE FIXES (Merch, Video, Latest Release, Footer) --- */
+
+/* Select all dark themes */
+body[data-theme="default-dark"] .video-item,
+body[data-theme="ios-dark"] .video-item,
+body[data-theme="material3-dark"] .video-item {
+    background: #222;
+    /* Default fallback */
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Specific background for iOS/M3 dark video items */
+body[data-theme="ios-dark"] .video-item,
+body[data-theme="material3-dark"] .video-item {
+    background: #1c1c1e;
+    /* iOS dark card */
+}
+
+/* GLOBAL FOOTER & TEXT VISIBILITY FIXES for ALL Dark Modes */
+body[data-theme="default-dark"] .contact-info-block,
+body[data-theme="default-dark"] .contact-info-block p,
+body[data-theme="default-dark"] .contact-info-block strong,
+body[data-theme="default-dark"] #instagram-cta p,
+body[data-theme="default-dark"] footer,
+body[data-theme="default-dark"] .footer-text,
+body[data-theme="ios-dark"] .contact-info-block,
+body[data-theme="ios-dark"] .contact-info-block p,
+body[data-theme="ios-dark"] .contact-info-block strong,
+body[data-theme="ios-dark"] #instagram-cta p,
+body[data-theme="ios-dark"] footer,
+body[data-theme="ios-dark"] .footer-text,
+body[data-theme="material3-dark"] .contact-info-block,
+body[data-theme="material3-dark"] .contact-info-block p,
+body[data-theme="material3-dark"] .contact-info-block strong,
+body[data-theme="material3-dark"] #instagram-cta p,
+body[data-theme="material3-dark"] footer,
+body[data-theme="material3-dark"] .footer-text,
+body[data-theme="default-dark"] .contact-info-block span,
+body[data-theme="ios-dark"] .contact-info-block span,
+body[data-theme="material3-dark"] .contact-info-block span {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Ensure labels in social bar or dropdowns are visible */
+body[data-theme="default-dark"] label,
+body[data-theme="ios-dark"] label,
+body[data-theme="material3-dark"] label {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Override inline styles in Latest Release & Merch */
+body[data-theme="default-dark"] .video-placeholder,
+body[data-theme="ios-dark"] .video-placeholder,
+body[data-theme="material3-dark"] .video-placeholder {
+    background: transparent !important;
+    /* Remove inline white bg */
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+/* Force text color to white in these blocks, ignoring inline styles */
+body[data-theme="default-dark"] .video-placeholder *,
+body[data-theme="ios-dark"] .video-placeholder *,
+body[data-theme="material3-dark"] .video-placeholder * {
+    color: #fff !important;
+}
+
+/* Specific fix for Material 3 Dark which might use different tones */
+body[data-theme="material3-dark"] .video-item {
+    background: #2b2930;
+}
+
+body[data-theme="material3-dark"] .video-placeholder *,
+body[data-theme="material3-dark"] .video-placeholder strong,
+body[data-theme="material3-dark"] .video-placeholder p {
+    color: #e6e1e5 !important;
+}
