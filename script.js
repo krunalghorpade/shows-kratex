@@ -178,6 +178,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     const dayOfMonthStr = dateObj.toLocaleDateString('en-US', { day: 'numeric' }).padStart(2, '0');
                     const dayOfWeekStr = dateObj.toLocaleDateString('en-US', { weekday: 'long' }).toUpperCase();
 
+                    let ticketUrl = event.url;
+                    if (event.offers && event.offers.length > 0) {
+                        // Attempt to find a "Tickets" type offer, or fallback to the first one available
+                        const ticketOffer = event.offers.find(o => o.type === 'Tickets') || event.offers[0];
+                        if (ticketOffer && ticketOffer.url) {
+                            ticketUrl = ticketOffer.url;
+                        }
+                    }
+
                     const row = document.createElement('div');
                     row.className = 'event-row';
 
@@ -188,10 +197,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="day-of-week">${dayOfWeekStr}</span>
                         </div>
                         <div class="venue-info">
-                            <div class="venue-city">${event.venue.city}, ${event.venue.country}</div>
-                            <div class="venue-name-small">${event.venue.name}</div>
+                            <div class="venue-city">${event.venue.name}</div>
+                            <div class="venue-name-small">${event.venue.city}, ${event.venue.country}</div>
                         </div>
-                        <a href="${event.url}" target="_blank" class="rsvp-btn">Buy Tickets</a>
+                        <a href="${ticketUrl}" target="_blank" class="rsvp-btn">Buy Tickets</a>
                     `;
                     tourDatesList.appendChild(row);
                 });
