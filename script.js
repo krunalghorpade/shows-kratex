@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 html = `
                     <a href="${video.url}" target="_blank" class="video-item">
                         <div class="video-thumbnail-container">
-                            <img src="${video.thumbnail}" alt="Video Thumbnail">
+                            <img src="${video.thumbnail}" alt="Kratex Live DJ Set Performance">
                             <div class="play-overlay">
                                 <svg class="play-icon" viewBox="0 0 24 24">
                                     <path d="M8 5v14l11-7z" />
