@@ -55,21 +55,21 @@ const pageData = {
     "merch": [
         {
             "name": "MVP T-SHIRT",
-            "url": "https://kratex.blinkstore.in/product/kratex-mvp-tshirt",
+            "url": "https://shop.kratex.in/products/mvp-unisex-oversized-t-shirt?variant=50940723200285",
             "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5NLHdEB5pgJ_tkOU9-ZjA61wbJfAVanJFrw&s"
         },
         {
             "name": "NUSTA VIBES UNISEX TSHIRT",
-            "url": "https://kratex.blinkstore.in/product/BPD-D6B7-C133-49EE",
+            "url": "https://shop.kratex.in/products/nusta-vibes-unisex-oversized-tee?variant=50954875306269",
             "image": "https://idn.blinkstore.in/XE6j3-1YOIpscuQaL-_Cs8ysy6Q=/960x0/filters:format(png)/xdn.blinkstore.ai/uploads/designs/pod-dD0qshP8CR9M29z.svg"
         },
         {
             "name": "MVP UNISEX HOODIE",
-            "url": "https://kratex.blinkstore.in/product/BPD-1F06-5EDA-4B66",
+            "url": "https://shop.kratex.in/products/mvp-unisex-oversized-hoodie?variant=50940749709597",
             "image": "https://idn.blinkstore.in/ezGbmKhM3WBCLNZ7iJU7GmE1pvE=/960x0/filters:format(png)/xdn.blinkstore.ai/uploads/designs/pod-pbJnSUgjUqXPM5h.svg"
         },
         {
-            "url": "https://kratex.blinkstore.in/",
+            "url": "https://shop.kratex.in/",
             "type": "shopAll",
             "placeholder": {
                 "span": "SEE ALL ITEMS",
