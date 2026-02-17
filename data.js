@@ -66,7 +66,7 @@ const pageData = {
         {
             "name": "MVP UNISEX HOODIE",
             "url": "https://shop.kratex.in/products/mvp-unisex-oversized-hoodie?variant=50940749709597",
-            "image": "https://idn.blinkstore.in/ezGbmKhM3WBCLNZ7iJU7GmE1pvE=/960x0/filters:format(png)/xdn.blinkstore.ai/uploads/designs/pod-pbJnSUgjUqXPM5h.svg"
+            "image": "https://shop.kratex.in/cdn/shop/files/Back_2_c_2.jpg?v=1771350693&width=1200"
         },
         {
             "url": "https://shop.kratex.in/",
